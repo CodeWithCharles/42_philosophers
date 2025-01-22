@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ato.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:13:37 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 11:26:20 by cpoulain         ###   ########.fr       */
+/*   Updated: 2025/01/22 18:59:15 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/philo.h"
+#include "philo.h"
 
 // Header implementation
 

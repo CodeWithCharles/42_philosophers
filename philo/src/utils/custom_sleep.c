@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is.c                                               :+:      :+:    :+:   */
+/*   custom_sleep.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 11:15:51 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 18:59:26 by cpoulain         ###   ########.fr       */
+/*   Created: 2025/01/22 18:07:50 by cpoulain          #+#    #+#             */
+/*   Updated: 2025/01/22 18:59:10 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,18 @@
 
 // Header implementations
 
-int	is_digit(
-	char c
+void	custom_sleep(
+	t_philo *philo,
+	time_t duration
 )
 {
-	return (c >= '0' && c <= '9');
+	time_t	now;
+
+	now = ft_time_ms();
+	while (now + duration > ft_time_ms())
+	{
+		if (!philo_is_running(philo->ctx))
+			break ;
+		usleep(((t_philo_ctx *)philo->ctx)->philo_count * 2);
+	}
 }

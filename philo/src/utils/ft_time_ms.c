@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_time_ms.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:25:29 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 11:26:05 by cpoulain         ###   ########.fr       */
+/*   Updated: 2025/01/22 18:59:21 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/philo.h"
+#include "philo.h"
 
 // Static prototypes
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   philo_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpoulain <cpoulain@student.42lehavre.fr>   +#+  +:+       +#+        */
+/*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:09:39 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 12:04:02 by cpoulain         ###   ########.fr       */
+/*   Updated: 2025/01/22 18:58:24 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/philo.h"
+#include "philo.h"
 
 // Static prototypes
 
@@ -46,7 +46,7 @@ void	philo_init_args(
 		&& !ft_atoui(argv[PROG_EACHP_TIMER], &ctx->timers.each))
 		error(ctx, ARG5 " " ERR_NAT_INT);
 	if (argc != PROG__MAX)
-		*each_ptr = INT_MAX;
+		ctx->timers.each = INT_MAX;
 	if (ctx->philo_count == 0)
 		error(ctx, ARG1 " " ERR_NULL);
 	if (pthread_mutex_init(&ctx->mutex_is_running, NULL))
