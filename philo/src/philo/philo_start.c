@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:33:08 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 18:59:04 by cpoulain         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:24:39 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,13 +105,12 @@ static void	_philo_died(
 		{
 			pthread_mutex_lock(&ctx->philos[i].mutex_eating);
 			time_since_eaten = ft_time_ms() - ctx->philos[i].last_time_eaten;
+			pthread_mutex_unlock(&ctx->philos[i].mutex_eating);
 			if (time_since_eaten >= ctx->timers.death)
 			{
 				philo_set_running(ctx, false);
 				philo_log(ctx, i, STATE_DIED);
-				pthread_mutex_unlock(&ctx->philos[i].mutex_eating);
 			}
-			pthread_mutex_unlock(&ctx->philos[i].mutex_eating);
 			++i;
 		}
 		_philo_check_each(ctx);
