@@ -6,7 +6,7 @@
 #    By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/22 18:20:38 by cpoulain          #+#    #+#              #
-#    Updated: 2025/01/22 19:03:59 by cpoulain         ###   ########.fr        #
+#    Updated: 2025/01/23 15:40:43 by cpoulain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ clean:
 	$(RM) -r $(OBJ_DIR)
 
 fclean: clean
-	$(RM) $(BIN_DIR)/$(NAME)
+	$(RM) -r $(BIN_DIR)
 
 re: fclean all
 
