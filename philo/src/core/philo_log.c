@@ -6,7 +6,7 @@
 /*   By: cpoulain <cpoulain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:45:31 by cpoulain          #+#    #+#             */
-/*   Updated: 2025/01/22 19:08:08 by cpoulain         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:57:54 by cpoulain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	philo_log(
 
 	pthread_mutex_lock(&mut);
 	if (philo_is_running(ctx) || state == STATE_DIED)
-		printf("%8ld ms - Philo %d : %s\n", ft_time_ms(), id + 1, messages[state]);
+		printf("%8ld ms - Philo %d : %s\n",
+			ft_time_ms(), id + 1, messages[state]);
 	pthread_mutex_unlock(&mut);
 }
